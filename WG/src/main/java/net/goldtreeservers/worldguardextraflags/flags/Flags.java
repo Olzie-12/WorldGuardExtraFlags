@@ -61,4 +61,6 @@ public final class Flags
 	public final static StateFlag ITEM_DURABILITY = new StateFlag("item-durability", true);
 	
 	public final static LocationFlag JOIN_LOCATION = new LocationFlag("join-location");
+
+	public final static StateFlag NATURAL_SPAWN = new StateFlag("natural-spawn", true);
 }

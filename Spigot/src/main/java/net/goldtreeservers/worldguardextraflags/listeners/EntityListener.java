@@ -13,6 +13,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.EntityToggleGlideEvent;
 import org.bukkit.event.world.PortalCreateEvent;
 
@@ -101,6 +102,15 @@ public class EntityListener implements Listener
 					break;
 				}
 			}
+		}
+	}
+
+	@EventHandler
+	public void onSpawn(CreatureSpawnEvent event) {
+		CreatureSpawnEvent.SpawnReason cause = event.getSpawnReason();
+		if (cause != CreatureSpawnEvent.SpawnReason.NATURAL) return;
+		if (this.regionContainer.createQuery().queryState(BukkitAdapter.adapt(event.getLocation()), null, Flags.NATURAL_SPAWN) == State.DENY) {
+			event.setCancelled(true);
 		}
 	}
 }
