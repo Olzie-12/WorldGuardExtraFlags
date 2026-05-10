@@ -63,4 +63,6 @@ public final class Flags
 	public final static LocationFlag JOIN_LOCATION = new LocationFlag("join-location");
 
 	public final static StateFlag NATURAL_SPAWN = new StateFlag("natural-spawn", true);
+
+	public final static StateFlag MYTHIC_SPAWN = new StateFlag("mythic-spawn", true);
 }

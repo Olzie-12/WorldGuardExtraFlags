@@ -87,6 +87,7 @@ public class WorldGuardExtraFlagsPlugin extends JavaPlugin
 			flagRegistry.register(Flags.ITEM_DURABILITY);
 			flagRegistry.register(Flags.JOIN_LOCATION);
 			flagRegistry.register(Flags.NATURAL_SPAWN);
+			flagRegistry.register(Flags.MYTHIC_SPAWN);
 		}
 		catch (Exception e)
 		{
